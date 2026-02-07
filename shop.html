@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Jo's Tutoring Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+    <div class="stars"></div>
+    
+    <nav class="navbar">
+        <div class="nav-brand">🎓 Jo's Tutoring Hub</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="lessons.html">Lessons</a>
+            <a href="quiz.html">Quizzes</a>
+            <a href="games.html">Games</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="shop.html">Shop</a>
+        </div>
+        <div class="coin-display">
+            <span class="coin-icon">🪙</span>
+            <span id="nav-coins">0</span>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="page-title">🏪 Reward Shop</h1>
+        <p class="subtitle">Redeem your coins for awesome portfolio perks and features!</p>
+        
+        <div class="shop-info">
+            <div class="wallet">
+                <span class="wallet-icon">💰</span>
+                <div class="wallet-info">
+                    <div class="wallet-label">Your Wallet</div>
+                    <div class="wallet-amount" id="walletCoins">0 Coins</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Portfolio Rewards -->
+        <div class="shop-section">
+            <h2>🎨 Portfolio Themes</h2>
+            <div class="items-grid">
+                <div class="shop-item" id="item-theme-1">
+                    <div class="item-icon">🌸</div>
+                    <h3>Cherry Blossom Theme</h3>
+                    <p>Unlock special cherry blossom effects for your portfolio</p>
+                    <div class="item-footer">
+                        <span class="item-price">500 🪙</span>
+                        <button class="buy-btn" onclick="purchaseItem('theme-1', 500, 'Cherry Blossom Theme')">Redeem</button>
+                    </div>
+                </div>
+                
+                <div class="shop-item" id="item-theme-2">
+                    <div class="item-icon">🌙</div>
+                    <h3>Midnight Mode</h3>
+                    <p>Dark theme with starry night effects</p>
+                    <div class="item-footer">
+                        <span class="item-price">400 🪙</span>
+                        <button class="buy-btn" onclick="purchaseItem('theme-2', 400, 'Midnight Mode')">Redeem</button>
+                    </div>
+                </div>
+                
+                <div class="shop-item" id="item-theme-3">
+                    <div class="item-icon">🌈</div>
+                    <h3>Rainbow Theme</h3>
+                    <p>Vibrant rainbow color scheme</p>
+                    <div class="item-footer">
+                        <span class="item-price">600 🪙</span>
+                        <button class="buy-btn" onclick="purchaseItem('theme-3', 600, 'Rainbow Theme')">Redeem</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Special Features -->
+        <div class="shop-section">
+            <h2>✨ Special Features</h2>
+            <div class="items-grid">
+                <div class="shop-item" id="item-feature-1">
+                    <div class="item-icon">🎵</div>
+                    <h3>Custom Music Track</h3>
+                    <p>Add your own background music to portfolio</p>
+                    <div class="item-footer">
+                        <span class="item-price">800 🪙</span>
+                        <button class="buy-btn" onclick="purchaseItem('feature-1', 800, 'Custom Music Track')">Redeem</button>
+                    </div>
+                </div>
+                
+                <div class="shop-item" id="item-feature-2">
+                    <div class="item-icon">🎭</div>
+                    <h3>Character Costumes</h3>
+                    <p>Unlock 5 new costumes for your character</p>
+                    <div class="item-footer">
+                        <span class="item-price">1000 🪙</span>
+                        <button class="buy-btn" onclick="purchaseItem('feature-2', 1000, 'Character Costumes')">Redeem</button>
+                    </div>
+                </div>
+                
+                <div class="shop-item" id="item-feature-3">
+                    <div class="item-icon">🌟</div>
+                    <h3>Particle Effects</h3>
+                    <p>Add cool particle animations throughout portfolio</p>
+                    <div class="item-footer">
+                        <span class="item-price">700 🪙</span>
+                        <button class="buy-btn" onclick="purchaseItem('feature-3', 700, 'Particle Effects')">Redeem</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Badges & Collectibles -->
+        <div class="shop-section">
+            <h2>🏅 Badges & Collectibles</h2>
+            <div class="items-grid">
+                <div class="shop-item" id="item-badge-1">
+                    <div class="item-icon">💎</div>
+                    <h3>Diamond Badge</h3>
+                    <p>Show off your dedication with this premium badge</p>
+                    <div class="item-footer">
+                        <span class="item-price">1500 🪙</span>
+                        <button class="buy-btn" onclick="purchaseItem('badge-1', 1500, 'Diamond Badge')">Redeem</button>
+                    </div>
+                </div>
+                
+                <div class="shop-item" id="item-badge-2">
+                    <div class="item-icon">👑</div>
+                    <h3>Crown Badge</h3>
+                    <p>Royal status for top learners</p>
+                    <div class="item-footer">
+                        <span class="item-price">2000 🪙</span>
+                        <button class="buy-btn" onclick="purchaseItem('badge-2', 2000, 'Crown Badge')">Redeem</button>
+                    </div>
+                </div>
+                
+                <div class="shop-item" id="item-badge-3">
+                    <div class="item-icon">🔥</div>
+                    <h3>Fire Badge</h3>
+                    <p>You're on fire! Show your streak</p>
+                    <div class="item-footer">
+                        <span class="item-price">1200 🪙</span>
+                        <button class="buy-btn" onclick="purchaseItem('badge-3', 1200, 'Fire Badge')">Redeem</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="shop.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games - Jo's Tutoring Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="games.css">
+</head>
+<body>
+    <div class="stars"></div>
+    
+    <nav class="navbar">
+        <div class="nav-brand">🎓 Jo's Tutoring Hub</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="lessons.html">Lessons</a>
+            <a href="quiz.html">Quizzes</a>
+            <a href="games.html">Games</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="shop.html">Shop</a>
+        </div>
+        <div class="coin-display">
+            <span class="coin-icon">🪙</span>
+            <span id="nav-coins">0</span>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="page-title">🎮 Learning Games</h1>
+        <p class="subtitle">Have fun while learning! Earn coins for playing educational games.</p>
+        
+        <div class="games-grid">
+            <div class="game-card" onclick="playMathGame()">
+                <div class="game-icon">🔢</div>
+                <h2>Math Challenge</h2>
+                <p>Solve as many math problems as you can in 60 seconds!</p>
+                <div class="game-reward">+25 coins per game 🪙</div>
+            </div>
+            
+            <div class="game-card" onclick="playWordGame()">
+                <div class="game-icon">📝</div>
+                <h2>Science Word Match</h2>
+                <p>Match scientific terms with their definitions!</p>
+                <div class="game-reward">+25 coins per game 🪙</div>
+            </div>
+            
+            <div class="game-card" onclick="playCodeGame()">
+                <div class="game-icon">💻</div>
+                <h2>Code Debug</h2>
+                <p>Find and fix the bugs in the code!</p>
+                <div class="game-reward">+25 coins per game 🪙</div>
+            </div>
+            
+            <div class="game-card" onclick="playMemoryGame()">
+                <div class="game-icon">🧠</div>
+                <h2>Memory Master</h2>
+                <p>Test your memory with educational flashcards!</p>
+                <div class="game-reward">+25 coins per game 🪙</div>
+            </div>
+        </div>
+        
+        <!-- Math Game Modal -->
+        <div id="mathGameModal" class="game-modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeMathGame()">&times;</span>
+                <h2>⏱️ Math Challenge</h2>
+                <p>Solve as many problems as you can in 60 seconds!</p>
+                
+                <div class="game-info">
+                    <div class="timer" id="mathTimer">60</div>
+                    <div class="score">Score: <span id="mathScore">0</span></div>
+                </div>
+                
+                <div id="mathProblem" class="math-problem"></div>
+                
+                <div class="answer-input">
+                    <input type="number" id="mathAnswer" placeholder="Your answer">
+                    <button onclick="submitMathAnswer()">Submit</button>
+                </div>
+                
+                <button class="start-btn" id="startMathBtn" onclick="startMathGame()">Start Game</button>
+                
+                <div id="mathResults" class="game-results" style="display: none;">
+                    <h3>Game Over!</h3>
+                    <p>You solved <span id="finalMathScore">0</span> problems!</p>
+                    <p class="coins-earned">+25 Coins! 🪙</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Simple notification for other games -->
+        <div id="gameNotification" class="game-notification" style="display: none;">
+            <p>Game completed! +25 Coins! 🪙</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="games.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Jo's Tutoring Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="stars"></div>
+    
+    <nav class="navbar">
+        <div class="nav-brand">🎓 Jo's Tutoring Hub</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="lessons.html">Lessons</a>
+            <a href="quiz.html">Quizzes</a>
+            <a href="games.html">Games</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="shop.html">Shop</a>
+        </div>
+        <div class="coin-display">
+            <span class="coin-icon">🪙</span>
+            <span id="nav-coins">0</span>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="page-title">📊 Your Learning Dashboard</h1>
+        
+        <!-- Stats Overview -->
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div class="stat-icon">🪙</div>
+                <div class="stat-value" id="totalCoins">0</div>
+                <div class="stat-label">Total Coins</div>
+            </div>
+            
+            <div class="stat-box">
+                <div class="stat-icon">📚</div>
+                <div class="stat-value" id="totalLessons">0</div>
+                <div class="stat-label">Lessons Completed</div>
+            </div>
+            
+            <div class="stat-box">
+                <div class="stat-icon">🎯</div>
+                <div class="stat-value" id="totalQuizzes">0</div>
+                <div class="stat-label">Quizzes Completed</div>
+            </div>
+            
+            <div class="stat-box">
+                <div class="stat-icon">🎮</div>
+                <div class="stat-value" id="totalGames">0</div>
+                <div class="stat-label">Games Played</div>
+            </div>
+            
+            <div class="stat-box">
+                <div class="stat-icon">🔥</div>
+                <div class="stat-value" id="streakDays">0</div>
+                <div class="stat-label">Day Streak</div>
+            </div>
+            
+            <div class="stat-box">
+                <div class="stat-icon">🏆</div>
+                <div class="stat-value" id="achievementCount">0</div>
+                <div class="stat-label">Achievements</div>
+            </div>
+        </div>
+        
+        <!-- Subject Progress -->
+        <div class="section">
+            <h2>📖 Subject Progress</h2>
+            <div class="progress-grid">
+                <div class="progress-card">
+                    <div class="progress-header">
+                        <span class="progress-icon">➗</span>
+                        <span class="progress-name">Mathematics</span>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill" id="math-progress"></div>
+                    </div>
+                    <div class="progress-text" id="math-text">0 lessons</div>
+                </div>
+                
+                <div class="progress-card">
+                    <div class="progress-header">
+                        <span class="progress-icon">🔬</span>
+                        <span class="progress-name">Science</span>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill" id="science-progress"></div>
+                    </div>
+                    <div class="progress-text" id="science-text">0 lessons</div>
+                </div>
+                
+                <div class="progress-card">
+                    <div class="progress-header">
+                        <span class="progress-icon">💻</span>
+                        <span class="progress-name">Programming</span>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill" id="programming-progress"></div>
+                    </div>
+                    <div class="progress-text" id="programming-text">0 lessons</div>
+                </div>
+                
+                <div class="progress-card">
+                    <div class="progress-header">
+                        <span class="progress-icon">🎮</span>
+                        <span class="progress-name">Game Development</span>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill" id="gamedev-progress"></div>
+                    </div>
+                    <div class="progress-text" id="gamedev-text">0 lessons</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Achievements -->
+        <div class="section">
+            <h2>🏆 Achievements</h2>
+            <div id="achievementsContainer" class="achievements-grid"></div>
+        </div>
+        
+        <!-- Danger Zone -->
+        <div class="section danger-section">
+            <h2>⚠️ Danger Zone</h2>
+            <button class="reset-btn" onclick="window.tutoringApp.resetProgress()">Reset All Progress</button>
+            <p class="warning-text">This will delete all your coins, progress, and achievements. This cannot be undone!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

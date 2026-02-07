@@ -1,0 +1,204 @@
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.game-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.game-card:hover {
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 20px 50px rgba(255, 215, 0, 0.4);
+    border-color: #ffd700;
+}
+
+.game-icon {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+
+.game-card h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.game-card p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1.5rem;
+}
+
+.game-reward {
+    background: rgba(255, 215, 0, 0.3);
+    padding: 0.7rem 1.2rem;
+    border-radius: 20px;
+    color: #ffd700;
+    font-weight: bold;
+    border: 1px solid #ffd700;
+    display: inline-block;
+}
+
+/* Game Modal */
+.game-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.game-modal .modal-content {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    margin: 5% auto;
+    padding: 3rem;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem 0;
+    gap: 2rem;
+}
+
+.timer, .score {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffd700;
+    flex: 1;
+}
+
+.math-problem {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 3rem;
+    border-radius: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+    margin: 2rem 0;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.answer-input {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.answer-input input {
+    flex: 1;
+    padding: 1rem;
+    font-size: 1.5rem;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    text-align: center;
+}
+
+.answer-input button {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.answer-input button:hover {
+    transform: scale(1.05);
+}
+
+.start-btn {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    border: none;
+    padding: 1.2rem 3rem;
+    font-size: 1.3rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+    box-shadow: 0 10px 30px rgba(245, 87, 108, 0.4);
+}
+
+.start-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(245, 87, 108, 0.6);
+}
+
+.game-results {
+    background: rgba(255, 215, 0, 0.2);
+    border: 2px solid #ffd700;
+    padding: 2rem;
+    border-radius: 20px;
+    margin-top: 2rem;
+}
+
+.game-results h3 {
+    color: #ffd700;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.game-results .coins-earned {
+    color: #ffd700;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.game-notification {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    background: linear-gradient(135deg, #00b09b, #96c93d);
+    color: white;
+    padding: 1.5rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    .game-modal .modal-content {
+        width: 95%;
+        padding: 1.5rem;
+    }
+    
+    .math-problem {
+        font-size: 2rem;
+        padding: 2rem;
+    }
+}

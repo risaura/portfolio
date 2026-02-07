@@ -1,0 +1,150 @@
+.shop-info {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    margin: 2rem 0;
+}
+
+.wallet {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.wallet-icon {
+    font-size: 4rem;
+}
+
+.wallet-info {
+    text-align: left;
+}
+
+.wallet-label {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+
+.wallet-amount {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffd700;
+}
+
+.shop-section {
+    margin-top: 4rem;
+}
+
+.shop-section h2 {
+    color: #ffd700;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.shop-item {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.shop-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(255, 215, 0, 0.3);
+    border-color: #ffd700;
+}
+
+.shop-item.purchased {
+    background: rgba(0, 255, 150, 0.1);
+    border-color: #00ff96;
+    opacity: 0.7;
+}
+
+.item-icon {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.shop-item h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.shop-item p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.item-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-top: auto;
+}
+
+.item-price {
+    background: rgba(255, 215, 0, 0.3);
+    padding: 0.7rem 1.2rem;
+    border-radius: 20px;
+    color: #ffd700;
+    font-weight: bold;
+    border: 1px solid #ffd700;
+    font-size: 1.1rem;
+}
+
+.buy-btn {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+    box-shadow: 0 5px 20px rgba(245, 87, 108, 0.4);
+}
+
+.buy-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(245, 87, 108, 0.6);
+}
+
+.buy-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.buy-btn.purchased-btn {
+    background: linear-gradient(135deg, #00b09b, #96c93d);
+}
+
+@media (max-width: 768px) {
+    .wallet {
+        flex-direction: column;
+    }
+    
+    .wallet-info {
+        text-align: center;
+    }
+}

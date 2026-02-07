@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jo's Interactive Tutoring Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="stars"></div>
+    
+    <nav class="navbar">
+        <div class="nav-brand">🎓 Jo's Tutoring Hub</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="lessons.html">Lessons</a>
+            <a href="quiz.html">Quizzes</a>
+            <a href="games.html">Games</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="shop.html">Shop</a>
+        </div>
+        <div class="coin-display">
+            <span class="coin-icon">🪙</span>
+            <span id="nav-coins">0</span>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="hero">
+            <h1 class="glitch" data-text="Welcome to Learning Paradise!">Welcome to Learning Paradise!</h1>
+            <p class="subtitle">Master new skills, earn coins, unlock awesome rewards! 🚀</p>
+            
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <div class="stat-icon">📚</div>
+                    <div class="stat-number" id="hero-lessons">0</div>
+                    <div class="stat-label">Lessons Completed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🪙</div>
+                    <div class="stat-number" id="hero-coins">0</div>
+                    <div class="stat-label">Coins Earned</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🏆</div>
+                    <div class="stat-number" id="hero-achievements">0</div>
+                    <div class="stat-label">Achievements</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <h2>What You Can Do Here</h2>
+            <div class="feature-grid">
+                <div class="feature-card" onclick="location.href='lessons.html'">
+                    <div class="feature-icon">📖</div>
+                    <h3>Interactive Lessons</h3>
+                    <p>Math, Science, Programming & more!</p>
+                    <span class="feature-reward">+50 coins per lesson</span>
+                </div>
+                
+                <div class="feature-card" onclick="location.href='quiz.html'">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Practice Quizzes</h3>
+                    <p>Test your knowledge and earn big!</p>
+                    <span class="feature-reward">+100 coins per quiz</span>
+                </div>
+                
+                <div class="feature-card" onclick="location.href='games.html'">
+                    <div class="feature-icon">🎮</div>
+                    <h3>Learning Games</h3>
+                    <p>Fun mini-games that teach!</p>
+                    <span class="feature-reward">+25 coins per game</span>
+                </div>
+                
+                <div class="feature-card" onclick="location.href='dashboard.html'">
+                    <div class="feature-icon">📊</div>
+                    <h3>Progress Dashboard</h3>
+                    <p>Track your learning journey!</p>
+                    <span class="feature-reward">View your stats</span>
+                </div>
+                
+                <div class="feature-card" onclick="location.href='shop.html'">
+                    <div class="feature-icon">🏪</div>
+                    <h3>Reward Shop</h3>
+                    <p>Redeem coins for portfolio perks!</p>
+                    <span class="feature-reward">Unlock themes & more</span>
+                </div>
+                
+                <div class="feature-card special-card">
+                    <div class="feature-icon">✨</div>
+                    <h3>Daily Challenges</h3>
+                    <p>Complete daily goals for bonus coins!</p>
+                    <span class="feature-reward">+200 coins daily</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="quick-start">
+            <h2>Quick Start</h2>
+            <div class="quick-start-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <p>Choose a subject from <a href="lessons.html">Lessons</a></p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <p>Complete lessons and quizzes to earn coins</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <p>Redeem coins in the <a href="shop.html">Shop</a> for portfolio rewards!</p>
+                </div>
+            </div>
+            <button class="cta-button" onclick="location.href='lessons.html'">Start Learning Now! 🚀</button>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2026 Jo's Tutoring Hub | Built with 💜 by Mayowa</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

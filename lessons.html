@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lessons - Jo's Tutoring Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="lessons.css">
+</head>
+<body>
+    <div class="stars"></div>
+    
+    <nav class="navbar">
+        <div class="nav-brand">🎓 Jo's Tutoring Hub</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="lessons.html">Lessons</a>
+            <a href="quiz.html">Quizzes</a>
+            <a href="games.html">Games</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="shop.html">Shop</a>
+        </div>
+        <div class="coin-display">
+            <span class="coin-icon">🪙</span>
+            <span id="nav-coins">0</span>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="page-title">📚 Choose Your Subject</h1>
+        
+        <div class="subjects-grid">
+            <div class="subject-card" onclick="showSubject('math')">
+                <div class="subject-icon">➗</div>
+                <h2>Mathematics</h2>
+                <p>Algebra, Geometry, Calculus & more</p>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-math"></div>
+                </div>
+                <span class="subject-lessons" id="lessons-math">0 lessons</span>
+            </div>
+            
+            <div class="subject-card" onclick="showSubject('science')">
+                <div class="subject-icon">🔬</div>
+                <h2>Science</h2>
+                <p>Physics, Chemistry, Biology</p>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-science"></div>
+                </div>
+                <span class="subject-lessons" id="lessons-science">0 lessons</span>
+            </div>
+            
+            <div class="subject-card" onclick="showSubject('programming')">
+                <div class="subject-icon">💻</div>
+                <h2>Programming</h2>
+                <p>Python, JavaScript, Web Dev</p>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-programming"></div>
+                </div>
+                <span class="subject-lessons" id="lessons-programming">0 lessons</span>
+            </div>
+            
+            <div class="subject-card" onclick="showSubject('gamedev')">
+                <div class="subject-icon">🎮</div>
+                <h2>Game Development</h2>
+                <p>Unity, Godot, Game Design</p>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-gamedev"></div>
+                </div>
+                <span class="subject-lessons" id="lessons-gamedev">0 lessons</span>
+            </div>
+        </div>
+
+        <!-- Lesson Content Modal -->
+        <div id="lessonModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeLesson()">&times;</span>
+                <h2 id="lessonTitle"></h2>
+                <div id="lessonContent"></div>
+                <button class="complete-btn" onclick="completeLessonBtn()">Complete Lesson (+50 Coins) 🪙</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="lessons.js"></script>
+</body>
+</html>
